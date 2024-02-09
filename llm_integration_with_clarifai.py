@@ -309,7 +309,7 @@ clarifai_vector_db = Clarifai.from_documents(
 
 # Run similarity search using Clarifai
 
-docs10 = clarifai_vector_db.similarity_search("stress manage")
+docs10 = clarifai_vector_db.similarity_search("how to manage stress?")
 
 print(docs10)
 
@@ -330,4 +330,4 @@ qa = RetrievalQA.from_chain_type(
     chain_type="stuff"
 )
 
-qa.run("stress?")
+qa.run("How to reduce daily stress?")
